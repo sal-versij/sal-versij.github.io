@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automi a Stati Finiti Deterministici</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Automi a Stati Finiti Deterministici</title>
+	<link rel="stylesheet" href="//stackedit.io/style.css" />
+	<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+	<style>
+		.h1, .h2, h1, h2 {
+			margin-bottom: 1.5rem !important;
+		}
+		
+		.stackedit__html {
+			margin-bottom: 180px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 30px;
+			padding-right: 30px;
+			max-width: unset !important;
+		}
+	</style>
 </head>
-
 <body class="stackedit">
-  <div class="stackedit__html"><h1 id="automi-a-stati-finiti-deterministici-asfd">Automi a stati finiti deterministici (ASFD)</h1>
+<div class="stackedit__left">
+	<div class="stackedit__toc">
+		
+<ul>
+<li><a href="#automi-a-stati-finiti-deterministici-asfd">Automi a stati finiti deterministici (ASFD)</a>
+<ul>
+<li>
+<ul>
+<li><a href="#stringa-accettata-da-un-asdf-a">Stringa accettata da un ASDF A</a></li>
+<li><a href="#linguaggio-accettato-da-un-asdf-a">Linguaggio accettato da un ASDF A</a></li>
+<li><a href="#funzione-transitiva-estesabardelta">Funzione transitiva estesa(δˉ\bar\deltaδˉ)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+	</div>
+</div>
+<div class="stackedit__right">
+	<div class="stackedit__html">
+		<h1 id="automi-a-stati-finiti-deterministici-asfd">Automi a stati finiti deterministici (ASFD)</h1>
 <blockquote>
 <p>Un’automa a stati finiti deterministico é una quintupla formata da: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo separator="true">,</mo><mi>Q</mi><mo separator="true">,</mo><mi>δ</mi><mo separator="true">,</mo><msub><mi>q</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A=(\Sigma, Q, \delta, q_0, F)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord">Σ</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault">Q</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault" style="margin-right: 0.03785em;">δ</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right: 0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.03588em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault" style="margin-right: 0.13889em;">F</span><span class="mclose">)</span></span></span></span></span></p>
 </blockquote>
@@ -104,7 +138,9 @@ così definita:</p>
 <li><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>δ</mi><mo>ˉ</mo></mover><mo stretchy="false">(</mo><mi>q</mi><mo separator="true">,</mo><mi>x</mi><mi>σ</mi><mo stretchy="false">)</mo><mo>=</mo><mi>δ</mi><mo stretchy="false">(</mo><mover accent="true"><mi>δ</mi><mo>ˉ</mo></mover><mo stretchy="false">(</mo><mi>q</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>σ</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mi mathvariant="normal">∀</mi><mi>x</mi><mo>∈</mo><msup><mi mathvariant="normal">Σ</mi><mo>∗</mo></msup><mo separator="true">,</mo><mi>σ</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\bar\delta(q, x\sigma) = \delta(\bar\delta(q,x),\sigma)\\
 \forall x \in \Sigma^*, \sigma \in \Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.08122em; vertical-align: -0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.83122em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord mathdefault" style="margin-right: 0.03785em;">δ</span></span><span class="" style="top: -3.26344em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.19444em;">ˉ</span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right: 0.03588em;">q</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right: 0.03588em;">σ</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1.08122em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.03785em;">δ</span><span class="mopen">(</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.83122em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord mathdefault" style="margin-right: 0.03785em;">δ</span></span><span class="" style="top: -3.26344em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.19444em;">ˉ</span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right: 0.03588em;">q</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault" style="margin-right: 0.03588em;">σ</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height: 0.73354em; vertical-align: -0.0391em;"></span><span class="mord">∀</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.883136em; vertical-align: -0.19444em;"></span><span class="mord"><span class="mord">Σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.688696em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault" style="margin-right: 0.03588em;">σ</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">Σ</span></span></span></span></span></li>
 </ol>
-</div>
-</body>
 
+	</div>
+</div>
+<script src="//code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+</body>
 </html>
